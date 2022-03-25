@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$mainDark : #495057;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.container{
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.line{
+    width: 0.5px;
+    height: 20px;
+    background: #E5E5E5;
+    margin: 0 17px;
+}
+
+.btn{
+    background: rgba(255, 255, 255, 0.15);
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.line-1{
+    width: 30px;
+    height: 1px;
+    background: #E5E5E5;
+    margin: 0 10px;
+}
+
+.subtitle{
+    font-weight: 400;
+    font-size: 12px;
+    color: #E5E5E5;
+}
+
+// header start
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/Image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .navbar{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0 70px;
+
+        &_logo{       
+            font-family: 'Spartan', sans-serif;  
+            font-weight: 700;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        &_menus{
+            display: flex;
+            align-items: center;
+
+            &_menu-1{
+                display: flex;
+                &-item{
+                    position: relative;
+                    transition: .3s all;
+                    font-family: 'Roboto';
+                    font-weight: 600;
+                    font-size: 12px;
+                    letter-spacing: 0.5px;
+
+                    &:not(:last-child){
+                        margin-right: 25px;
+                    }
+
+                    .underline{
+                        display: none;
+                        transition: .3s all;
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: #D4A373;
+                        margin-top: 2px;
+                    }
+
+                    &:hover{
+                        .underline{
+                            display: block;
+                        }
+                    }
+                    
+                }
+            }
+
+            &_menu-2{
+                display: flex;
+
+                &-item{
+                    width: 20px;
+                    height: 20px;
+                    &:not(:last-child){
+                        margin-right: 25px;
+                    }
+
+                    .underline{
+                        display: none;
+                        transition: .3s all;
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background: #D4A373;
+                        margin-top: 2px;
+                    }
+
+                    &:hover{
+                        .underline{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &_menu-3{
+                &-item{
+                    width: 20px;
+                    height: 20px;
+
+                    .underline{
+                        display: none;
+                        transition: .3s all;
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background: #D4A373;
+                        margin-top: 2px;
+                    }
+
+                    &:hover{
+                        .underline{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+        }
+    } 
+}
+
+.header_content{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 70px;
+
+    &_txt{
+        width: 530px;
+
+        &-title{
+            margin: 15px 0 13px;
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        &_sliders{
+            cursor: pointer;
+            margin-top: 84px;
+            width: 44px;
+            height: 8px;
+            display: flex;
+            justify-content: space-between;
+
+            &-item{
+                width: 8px;
+                height: 8px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+
+                &:first-child{
+                    background: #fff;
+                }
+            }
+        }
+
+        .subtitle{
+            position: relative;
+            display: flex;
+            // align-items: center;
+
+
+            .line-1{
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+}
+
+
+// header end
+
+// * ~~~~~~~~~ POPULAR SECTION START ~~~~~~~~~
+
+.popular{
+    height: 1380px;
+    padding-top: 150px;
+
+    &_title{   
+        font-weight: 700;
+        font-size: 36px;
+        color: #495057;
+    }
+
+    &_topics{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_menu{
+            display: flex;
+            margin: 30px 0;
+            &-item{
+                transition: .3s all;
+                &:hover{
+                    a{
+                        color: #D4A373;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                a{
+                    color: $mainDark;    
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+        }
+        .viewall{
+            margin: 30px 0;
+            color: $mainDark;
+            transition: .3s all;
+            &:hover{
+                color: #D4A373;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_cards{
+
+        &-1{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        &-2{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .popular_cards_card{
+            cursor: pointer;
+            border-radius: 5px;
+            width: 310px;
+            height: 460px;
+
+            &-img{
+                width: 310px;
+                height: 280px;
+                position: relative;
+                .btn{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+            }
+
+            .subtitle{
+                color: #6C757D;
+            }
+
+            &_txt{
+                padding: 15px 0;
+                &-title{     
+                font-weight: 700;
+                font-size: 18px;
+                color: #495057;
+                margin: 15px 0; 
+                }
+            }
+
+            
+        }
+    }
+}
+
+// ! ~~~~~~~~~ POPULAR SECTION END ~~~~~~~~~
+
+// * ~~~~~~~~~ RICHIRD SECTION START ~~~~~~~~~
+
+.richird{
+    width: 100%;
+    height: 600px;
+    background: url(../images/Image-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_title{
+        width: 530px;    
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 46px;
+        margin: 24px 13px;
+        
+    }
+
+    .subtitle{
+        width: 420px;
+        line-height: 20px;
+    }
+
+    .line-1{
+        margin: 24px 15px;
+    }
+}
+
+// ! ~~~~~~~~~ RICHIRD SECTION END ~~~~~~~~~
+
+// * ~~~~~~~~~ PICK SECTION START ~~~~~~~~~
+
+.pick{
+    width: 100%;
+    height: 764px;
+
+    &_title{
+        color: $mainDark;           
+        font-weight: 700;
+        font-size: 36px;
+        margin: 149px 0 70px;
+    }
+
+    &_cards{
+        display: flex;
+        justify-content: space-between;
+
+        &_card{
+            position: relative;
+            width: 420px;
+            height: 350px;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 40px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .btn{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            &-title{   
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                margin: 15px 0;
+            }
+
+            .subtitle{    
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            &:first-child{
+                background: url("../images/Blog\ Image\ \(9\).png");
+            }
+
+            &:nth-child(2){
+                background: url("../images/Blog\ Image\ \(10\).png");
+            }
+
+            &:nth-child(3){
+                background: url("../images/Blog\ Image\ \(11\).png");
+            }
+        }
+    }
+}
+
+// ! ~~~~~~~~~ PICK SECTION END ~~~~~~~~~
+
+// * ~~~~~~~~~ FOOTER START ~~~~~~~~~
+
+.footer{
+    height: 400px;
+    width: 100%;
+    background: #212529;
+
+    .footer_content{
+        display: flex;
+        justify-content: space-between;
+        
+        height: 400px;
+        padding-top: 106px;
+
+        .footer_content_title{        
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .footer_content_menu{
+            &-item{   
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                a{
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #E5E5E5;
+                }
+            }
+        }
+
+        .menu{
+            .footer_content_menu{
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 190px;
+                &-item{
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    &_license{
+        background: #343A40;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 110px;
+
+        &-title{
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+}
+
+// ! ~~~~~~~~~ FOOTER END ~~~~~~~~~
